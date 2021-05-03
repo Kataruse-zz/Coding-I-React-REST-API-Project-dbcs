@@ -5,7 +5,7 @@ main {
   text-align: center;
   vertical-align: center;
   line-height: 5vh;
-  display: flex;
+  /* display: flex; */
 }
 .pokemon {
   width: 250px;
