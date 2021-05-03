@@ -1,5 +1,40 @@
 main {
+  background-image: url("src/img/background1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
   text-align: center;
   vertical-align: center;
-  line-height: 100vh
+  line-height: 5vh;
+  display: flex;
+}
+.pokemon {
+  width: 250px;
+  height: 250px;
+}
+.pkinfo {
+  background: lightblue;
+  width: 150px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 15px;
+  margin-top: 5%;
+  padding-top: 10px;
+}
+.title {
+  width: 500px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 15px;
+  margin-top: 15%;
+  padding-top: 10px;
+  background-color: lightblue;
+}
+
+.e {
+    width: 100px;
+    padding: 5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    text-transform: capitalize;
 }
