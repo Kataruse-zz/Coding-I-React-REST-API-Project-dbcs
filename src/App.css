@@ -1,11 +1,12 @@
 main {
   background-image: url("src/img/background1.jpg");
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: contain;
   text-align: center;
   vertical-align: center;
   line-height: 5vh;
-  /* display: flex; */
+  display: flex;
+  padding-top: 190px;
 }
 .pokemon {
   width: 250px;
@@ -13,10 +14,10 @@ main {
 }
 .pkinfo {
   background: lightblue;
-  width: 150px;
-  height: 250px;
+  /* width: 250px; */
+  /* height: 300px; */
   margin: 0 auto;
-  border-radius: 15px;
+  border-radius: 10px;
   margin-top: 5%;
   padding-top: 10px;
 }
