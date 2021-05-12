@@ -1,12 +1,16 @@
-main {
-  background-image: url("src/img/background1.jpg");
-  background-size: contain;
-  background-repeat: contain;
+.header{
+  background-image: url("src/img/head.png");
+  width: 100%
+}
+.mainMain {
+  background-image: url("src/img/back.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
   vertical-align: center;
   line-height: 5vh;
   display: flex;
-  padding-top: 190px;
+  padding-top: 10px;
 }
 .pokemon {
   width: 250px;
@@ -14,16 +18,18 @@ main {
 }
 .pkinfo {
   background: lightblue;
-  /* width: 250px; */
+  width: 50%;
   /* height: 300px; */
   margin: 0 auto;
   border-radius: 10px;
   margin-top: 5%;
   padding-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .title {
   width: 500px;
-  height: 150px;
+  height: 250px;
   margin: 0 auto;
   border-radius: 15px;
   margin-top: 15%;
@@ -39,3 +45,4 @@ main {
     border-radius: 15px;
     text-transform: capitalize;
 }
+

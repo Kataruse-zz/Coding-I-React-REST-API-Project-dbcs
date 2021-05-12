@@ -1,0 +1,16 @@
+body{
+  background-color:black;
+  color: white; 
+}
+
+.pkstats{
+  width: 100%;
+  background-color:rgb(32, 32, 32);
+  font-size: 160%;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.list{
+  background-color: aqua;
+}
