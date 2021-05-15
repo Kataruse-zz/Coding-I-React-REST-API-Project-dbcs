@@ -1,0 +1,18 @@
+.category {
+    width: 100px;
+    padding: 5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    text-transform: capitalize;
+}
+
+.blue {
+    background: #060CE9;
+    color: #E0AD5F;
+}
+
+.yellow {
+    background: #E0AD5F;
+    color: #060CE9;
+}

@@ -1,16 +1,13 @@
-body{
-  background-color:black;
-  color: white; 
-}
-
-.pkstats{
+.gameHeaderBackground{
+  background-image: url("src/img/chadgameb.png");
   width: 100%;
-  background-color:rgb(32, 32, 32);
-  font-size: 160%;
-  padding-top: 10px;
-  padding-bottom: 0px;
+  height: 100%;
+  background-color: black;
 }
+.gameBack{
+  background-color: maroon;
+  text-align: center;
+  height: 100%;
+  color: white;
 
-.list{
-  background-color: aqua;
 }

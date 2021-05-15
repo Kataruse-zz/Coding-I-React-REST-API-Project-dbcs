@@ -1,0 +1,14 @@
+.moveStat {
+  margin-top: 165px;
+  margin-left: 200px;
+  text-align: left;
+  width: 300px;
+  line-height: 1em;
+  
+}
+
+.moves {
+  width: 200px;
+  text-align: left;
+  line-height: 1em;
+}
