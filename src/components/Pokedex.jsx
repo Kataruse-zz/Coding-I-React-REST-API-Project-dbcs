@@ -1,27 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import "./Pokedex.css"
 
-export default function Pokedex({pokemon}) {
-    const [toggle, setToggle] = useState("yellow");
+export default function Pokedex({id, name, sprites}) {
+    const [toggle, setToggle] = useState("maroon");
 
     const handleToggle = () => {
-        if(toggle == "yellow") {
-            setToggle("blue")
+        if(toggle == "maroon") {
+            setToggle("lightblue")
         } else {
-            setToggle("yellow")
+            setToggle("maroon")
         }
     }
 
     return (
-        <div onClick={handleToggle} className={`category ${toggle}`}>
-            <h3>{pokemon.id} {pokemon.name}</h3>
-            <img src={pokemon.sprites.front_default}/>
+        <div onClick={handleToggle} className={`pokedexbackground ${toggle}`}>
+            <h2>{id} {name}</h2>
+            <img src={sprites}/>
         </div>
     )
 }
-
-        {isLoaded && (
-          <Pokedex pokemon={pokemon} />
-        )}
-
-export default Pokedex;
