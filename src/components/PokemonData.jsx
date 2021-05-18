@@ -1,9 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './PokemonData.css';
 
 function PokemonData({ pokemon }) {
+  const [offset, setOffset] = useState(0);
 
-const [offset, setOffset] = useState(0);
+  const nextmoves = () => {
+    if(offset < pokemon.moves.length - 4) {
+        setOffset(offset + 4)
+      }
+  }
+  
+  const lastmoves = () => {
+    if(offset > 0) {
+          setOffset(offset - 4)
+      }
+  }
 
 return (
   <>
@@ -15,7 +26,8 @@ return (
       </div>
     <div className="typesMoves">
       <p><strong>Type:</strong> {pokemon.types.slice(0,4).map(type => `${type.type.name}, `)} </p>
-      <p><strong>Moves:</strong> {pokemon.moves.slice(0,4).map(move => `${move.move.name}, `)} </p>
+      <p><strong>Moves:</strong> {pokemon.moves.slice(offset, offset + 4).map(move => `${move.move.name}, `)} </p>
+      <button onClick={lastmoves}>Last</button><button onClick={nextmoves}>Next</button>
     </div>
   </>
 )
