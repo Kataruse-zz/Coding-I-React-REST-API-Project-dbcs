@@ -1,0 +1,18 @@
+.pkInfo{
+  font-size: 15px;
+  width: 250px;
+  height: 250px;
+  margin-left: 370px;
+  margin-bottom: 135px;
+}
+.pkSprite{
+  margin-top: 350px;
+  height:175px;
+  width: 175px;
+}
+.typesMoves{
+  width: 200px;
+  text-align: left;
+  line-height: 1em;
+  margin-left: 765px;
+}
