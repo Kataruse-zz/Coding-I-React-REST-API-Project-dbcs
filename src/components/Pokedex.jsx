@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import "./Pokedex.css"
 
-export default function Pokedex({id, name, sprites}) {
+export default function Pokedex({id, name, sprites, setCurrentPage, setId, setToggle2}) {
     const [toggle, setToggle] = useState("maroon");
 
     const handleToggle = () => {
         if(toggle == "maroon") {
-            setToggle("lightblue")
+            setToggle("grey")
+            setId(id)
+            setToggle2("black")
+            setCurrentPage(1)
         } else {
             setToggle("maroon")
         }
@@ -17,5 +20,9 @@ export default function Pokedex({id, name, sprites}) {
             <h2>{id} {name}</h2>
             <img src={sprites}/>
         </div>
+
+
+
+        
     )
 }
