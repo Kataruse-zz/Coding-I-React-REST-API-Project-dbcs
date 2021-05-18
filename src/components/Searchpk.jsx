@@ -2,15 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import Pokedex from "./Pokedex";
 import "./Searchpk.css"
 
-export default function Searchpk({setCurrentPage, setId}) {
-  const [pokemonName, setPokemonName] = useState({})
-  const [pokemon, setPokemon] = useState({})
-  const [isLoaded, setIsLoaded] = useState(false);
+export default function Searchpk({ setCurrentPage, setId, setToggle2 }) {
+  const [pokemon, setPokemon] = useState({});
   const [dexID, setDexID] = useState(1);
-  const name = useRef(null);
-  const [results, setResults] = useState("");
+  const [pokemonName, setPokemonName] = useState({});
   const [userPokemon, setUserPokemon] = useState("");
-  const [toggle2, setToggle2] = useState("maroon");
+  const [results, setResults] = useState("");
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded2, setIsLoaded2] = useState(false);
+  const name = useRef(null);
 
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${dexID}/`)
@@ -26,6 +26,7 @@ export default function Searchpk({setCurrentPage, setId}) {
       .then(response => response.json())
       .then(data => {
         setPokemonName(data)
+        setIsLoaded2(true)
       })
   })
 
@@ -53,6 +54,7 @@ export default function Searchpk({setCurrentPage, setId}) {
       setDexID(1)
     }
   }
+
   const decrease = () => {
     if (dexID !== 1) {
       setDexID(dexID - 1)
@@ -75,6 +77,11 @@ export default function Searchpk({setCurrentPage, setId}) {
             <Pokedex id={pokemon.id} name={pokemon.name} sprites={pokemon.sprites.front_default} setCurrentPage={setCurrentPage} setId={setId} setToggle2={setToggle2} />
             <h3>Below are all the pokemon you can enter or any number from 1-898</h3>
             <h1>---------------------------------------</h1>
+            {isLoaded2 && (
+              <>
+            <p> {pokemonName.results.map(type => `${type.name}, `)} </p>
+            </>
+            )}
           </>
         )}
       </div>
